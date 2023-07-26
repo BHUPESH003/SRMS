@@ -21,7 +21,10 @@ const Navbar = () => {
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />} {/* Use the menu and close icons */}
         </button>
+        <Link to={'/'}>
+
         <img src={Logo} alt="Logo" className={`h-12 ${isMenuOpen ? "hidden md:block" : ""}`} />
+        </Link>
       </div>
 
       <CSSTransition

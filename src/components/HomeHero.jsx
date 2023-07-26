@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HERO_DATA } from "../constants";
 import { HERO_IMG } from "../constants";
+import { HERO_IMG_DW } from "../constants";
+
 
 const HomeHero = () => {
   const containerStyle = {
-    backgroundImage: "url('https://www.farmery.in/Farmerynew/img/background_flowers.png')",
+    backgroundImage:
+      `url(${HERO_IMG_DW})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
@@ -15,26 +18,30 @@ const HomeHero = () => {
       className="herocontainer flex justify-center flex-col items-center p-4"
       style={containerStyle}
     >
-      <div className="bg-white rounded-lg w-11/12 md:w-3/4 flex justify-center flex-col">
-        <div className="container shadow-2xl mx-auto px-4 py-8 sm:py-12 flex flex-col items-center sm:flex-row sm:items-start sm:justify-center ">
-          {/* Add your image here */}
+      <div className="bg-white rounded-lg w-11/12 md:w-3/4 flex flex-col md:flex-row">
+        {/* Image Container */}
+        <div className="md:w-1/2 flex justify-center items-center mb-4 sm:mb-0 sm:mr-4 md:p-8 rounded-t-lg md:rounded-bl-lg">
           <img
             src={HERO_IMG}
             alt="Your Image"
-            className="md:w-1/2 items-center mb-4 sm:mb-0 sm:mr-4 md:pt-16 rounded-b-lg rounded-t-lg"
+            className="w-full h-auto object-cover rounded-t-lg md:rounded-bl-lg"
           />
-          {/* Add your data here */}
-          <p className="text-sm text-center sm:text-lg sm:text-left">
+        </div>
+
+        {/* Text Container */}
+        <div className="md:w-1/2 p-4 md:p-8 flex flex-col justify-center md: border-gray-300 md:border-l-2">
+        <h3 className="text-2xl font-extrabold">Why Choose SRIRAMS?</h3>
+          <p className="text-sm text-center md:text-base md:text-left">
             {HERO_DATA.content}
           </p>
+          <div className="text-center mt-4">
+            <Link to="/whyus">
+              <button className="px-6 py-3 bg-blue-600 rounded-md shadow-md hover:bg-blue-700">
+                {HERO_DATA.buttonText}
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="text-center mt-4">
-        <Link to="/whyus">
-          <button className="px-6 py-3 bg-blue-600 rounded-md shadow-md hover:bg-blue-700">
-            {HERO_DATA.buttonText}
-          </button>
-        </Link>
       </div>
     </div>
   );

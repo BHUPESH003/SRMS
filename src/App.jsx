@@ -8,6 +8,7 @@ import Support from './pages/Support';
 import Profile from './pages/Profile';
 import Products from './pages/Products';
 import Error from './components/Error'
+import Community from './pages/Community';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
@@ -28,6 +29,11 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route
       path="profile"
       element={<Profile />}
+     
+    />
+       <Route
+      path="community"
+      element={<Community />}
      
     />
       <Route path="*" element={<Error />} />
