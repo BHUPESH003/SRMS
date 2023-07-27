@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PRODUCT } from "../constants";
+import { PRODUCT } from "../../constants";
 
 const ProductContainer = () => {
   const productsToShow = PRODUCT.slice(0, 4); // Show the first 4 products

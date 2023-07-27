@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import Products from './pages/Products';
 import Error from './components/Error'
 import Community from './pages/Community';
+import ProductDetails from './components/product/ProductDetails';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
@@ -20,7 +21,11 @@ const router = createBrowserRouter(createRoutesFromElements(
       element={<Products />}
      
     />
-    
+      <Route
+      path="products/:productId"
+      element={<ProductDetails />}
+     
+    />
     <Route
       path="support"
       element={<Support />}

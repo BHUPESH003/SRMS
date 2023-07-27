@@ -1,6 +1,8 @@
 import React from "react";
-import { TESTIMONIALS, ARTICLES } from "../constants";
+import { TESTIMONIALS, ARTICLES } from "../../constants";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import the Link component from react-router-dom
+import { useEffect } from "react";
 
 const TestimonialsSection = () => {
   // State to keep track of the current testimonial index
@@ -15,12 +17,20 @@ const TestimonialsSection = () => {
   const prevTestimonial = () => {
     setCurrentTestimonialIndex((prevIndex) => (prevIndex - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prevIndex) => (prevIndex + 1) % TESTIMONIALS.length);
+    }, 6000); // Change the duration (in milliseconds) to adjust the sliding speed
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="bg-white py-8 border-t border-gray-300 shadow-lg ">
+    <div className="bg-white py-8 border-t border-gray-300 shadow-lg">
+          <h2 className="text-2xl font-semibold mb-4 flex justify-center">Know More About Us</h2>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Section - Testimonial Slider */}
-        <div className="w-full md:w-1/2 flex flex-col items-center border-r border-gray-300 md:p-5 ">
+        <div className="w-full md:w-1/2 flex flex-col items-center border-r border-gray-300 md:p-5">
           {/* Testimonial Slider */}
           <div className="relative w-64 h-96 sm:w-96 md:h-72 bg-gray-200 rounded-lg overflow-hidden mb-4">
             {/* Map through testimonials */}
@@ -66,11 +76,17 @@ const TestimonialsSection = () => {
             >
               <FaChevronRight />
             </button>
+         
           </div>
+          <div className="text-center mt-8">
+        <Link to="/community" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+          Load More
+        </Link>
+      </div>
         </div>
 
         {/* Right Section - Video Preview and Articles */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:pl-8 mt-10 pr-8">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:pl-8 mt-10 pr-8 ">
           {/* Video Preview */}
           <div className="w-72 md:w-full h-48 bg-gray-200 rounded-lg mb-4 ">
             {/* Add your video component here */}
@@ -99,6 +115,8 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
+      {/* Load More Button */}
+     
     </div>
   );
 };

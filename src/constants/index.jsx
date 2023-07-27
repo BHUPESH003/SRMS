@@ -12,6 +12,22 @@ import visa from '../assets/images/visa.png'
 import mastercard from '../assets/images/mastercard.svg'
 import upi from '../assets/images/upi.jpeg'
 
+import Gurugram from '../assets/images/Gurugram.jpg'
+import Gurugram2 from '../assets/images/Gurugram-2.jpg'
+import Noida from '../assets/images/Noida.jpeg'
+import Ghaziabad from '../assets/images/Ghaziabad.jpg'
+
+import DesiCowBanner from '../assets/images/a2-desi-cow-banner.jpg'
+import CowBanner from '../assets/images/cow-milk-banner.jpg'
+import BuffaloeBanner from '../assets/images/buffaloe-banner-image.jpg'
+import PaneerBanner from '../assets/images/panner-banner-image.jpg'
+import DesiGheeBanner from '../assets/images/desi-ghee-banner-image.avif'
+
+
+
+
+
+
 
 
 
@@ -35,9 +51,9 @@ export const MAIN_PAGES = [
 
 export const PRODUCTS = [
   { id: 1, name: "Cow Milk" },
-  { id: 2, name: "Buffaloe Milk" },
-  { id: 1, name: "Paneer" },
-  { id: 3, name: "Desi Ghee" },
+  { id: 3, name: "Buffaloe Milk" },
+  { id: 4, name: "Paneer" },
+  { id: 5, name: "Desi Ghee" },
 ];
 
 export const IMPORTANT_LINKS = [
@@ -75,20 +91,20 @@ export const PRODUCT = [
     price: "65-85",
   },
   {
-    id: 2,
+    id: 3,
     name: "Buffaloe Milk",
     image: BuffaloeMilk,
     price: 75,
   },
   // Add more product objects as needed
   {
-    id: 3,
+    id: 4,
     name: "Paneer",
     price: 350,
     image: Paneer,
   },
   {
-    id: 4,
+    id: 5,
     name: "Desi Ghee",
     price: 1200,
     image: DesiGhee,
@@ -127,7 +143,7 @@ export const SOCIAL_LINKS = [
   {
     name: "Instagram",
     icon: "/path/to/instagram.png", // Replace with the path to the Instagram icon
-    link: "https://www.instagram.com/example", // Replace with the link for Instagram
+    link: "https://www.instagram.com/ydv.bhupesh", // Replace with the link for Instagram
   },
   {
     name: "YouTube",
@@ -202,3 +218,96 @@ export const ARTICLES = [
   // Add more articles with their respective images
 ];
 
+export const COMMUNITY_DATA = [
+  {
+    id: 1,
+    image: Gurugram, // Replace with the URL of the image for the first community item
+    heading: "Gurugram",
+  },
+  {
+    id: 2,
+    image: Noida, // Replace with the URL of the image for the second community item
+    heading: "Noida",
+  },
+  {
+    id: 3,
+    image: Gurugram2, // Replace with the URL of the image for the second community item
+    heading: "Gurugram 2",
+  },
+  {
+    id: 4,
+    image: Ghaziabad, // Replace with the URL of the image for the second community item
+    heading: "Ghaziabad",
+  },
+  // Add more community items as needed
+];
+
+
+
+export const PRODUCTS_DATA = {
+  categories: [
+    { id: 1, name: "Cow Milk", image: CowMilk, bannerImage: CowBanner },
+    { id: 2, name: "Buffaloe Milk", image: BuffaloeMilk, bannerImage: BuffaloeBanner },
+    { id: 3, name: "Paneer", image: Paneer, bannerImage: PaneerBanner },
+    { id: 4, name: "Desi Ghee", image: DesiGhee, bannerImage: DesiGheeBanner },
+    // Add more categories if needed
+  ],
+  products: [
+    {
+      id: 1,
+      name: "A2 Desi Cow Milk",
+      category: 1,
+      description:
+        "Our A2 Desi Cow Milk is sourced from indigenous Indian cow breeds known for their A2 beta-casein protein. It is rich in essential nutrients and has a natural taste.",
+      image: CowMilk,
+      bannerImage: DesiCowBanner, // Add the banner image URL
+      price: "₹85/ l",
+      quantity: "Customizable",
+    },
+    {
+      id: 2,
+      name: "A1 Cow Milk",
+      category: 1,
+      description:
+        "Enjoy the goodness of fresh and pure A1 Cow Milk, sourced from healthy cows. It is pasteurized to retain its natural freshness and quality.",
+      image: CowMilk,
+      bannerImage: CowBanner, // Add the banner image URL
+      price: "₹65/ l",
+      quantity: "Customizable",
+    },
+    {
+      id: 3,
+      name: "Buffaloe Milk",
+      category: 2,
+      description:
+        "Indulge in the rich and creamy taste of our farm-fresh Buffaloe Milk. It is hygienically processed and packed to ensure superior quality.",
+      image: BuffaloeMilk,
+      bannerImage:BuffaloeBanner, // Add the banner image URL
+      price: "₹75/ l",
+      quantity: "Customizable",
+    },
+    // Add more products if needed
+    {
+      id: 4,
+      name: "Paneer",
+      category: 3,
+      description:
+        "Our soft and fresh Paneer is made from pure cow's milk. It adds a delightful taste and texture to your favorite Indian dishes.",
+      image: Paneer,
+      bannerImage:PaneerBanner, // Add the banner image URL
+      price: "₹350/ kg",
+      quantity: "Customizable",
+    },
+    {
+      id: 5,
+      name: "Desi Ghee",
+      category: 4,
+      description:
+        "Experience the rich aroma and authentic taste of our Desi Ghee, made from pure cow's milk. It is ideal for cooking and enhances the flavors of your meals.",
+      image: DesiGhee,
+      bannerImage: DesiGheeBanner, // Add the banner image URL
+      price: "₹1200/ kg",
+      quantity: "Customizable",
+    },
+  ],
+};

@@ -1,8 +1,10 @@
 import React from 'react'
-
+import ProductBar from '../components/product/productbar'
 const Products = () => {
   return (
-    <div>Products</div>
+    <>
+      <ProductBar/>
+    </>
   )
 }
 

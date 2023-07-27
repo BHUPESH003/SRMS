@@ -1,8 +1,9 @@
 import React from 'react'
-import Slider from '../components/Slider'
-import HomeProducts from '../components/HomeProducts'
-import HomeHero from '../components/HomeHero'
-import TestimonialsSection from '../components/Testimonial'
+import Slider from '../components/Home/Slider'
+import HomeProducts from '../components/Home/HomeProducts'
+import HomeHero from '../components/Home/HomeHero'
+import TestimonialsSection from '../components/Home/Testimonial'
+import HomeCommunity from '../components/Home/HomeCommunity'
 
 
 const Home = () => {
@@ -11,8 +12,8 @@ const Home = () => {
       <Slider/>
       <HomeHero/>
       <HomeProducts/>
+      <HomeCommunity/>
       <TestimonialsSection/>
-    
     </>
   )
 }

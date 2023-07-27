@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HERO_DATA } from "../constants";
-import { HERO_IMG } from "../constants";
-import { HERO_IMG_DW } from "../constants";
+import { HERO_DATA } from "../../constants";
+import { HERO_IMG } from "../../constants";
+import { HERO_IMG_DW } from "../../constants";
 
 
 const HomeHero = () => {
@@ -36,7 +36,7 @@ const HomeHero = () => {
           </p>
           <div className="text-center mt-4">
             <Link to="/whyus">
-              <button className="px-6 py-3 bg-blue-600 rounded-md shadow-md hover:bg-blue-700">
+              <button className="px-6 py-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
                 {HERO_DATA.buttonText}
               </button>
             </Link>
