@@ -36,7 +36,7 @@ const HomeHero = () => {
           </p>
           <div className="text-center mt-4">
             <Link to="/whyus">
-              <button className="px-6 py-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+              <button className=" bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
                 {HERO_DATA.buttonText}
               </button>
             </Link>

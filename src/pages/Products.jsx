@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductBar from '../components/product/productbar'
+import ProductBar from '../components/Products/Productbar'
 const Products = () => {
   return (
     <>
