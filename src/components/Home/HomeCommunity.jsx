@@ -46,7 +46,7 @@ const Community = () => {
               key={communityItem.id}
               className=" p-6 rounded-lg flex flex-col items-center justify-center mb-4"
             >
-              <Link to={`/community/${communityItem.id}`}>
+              
                 {/* Use the Link component with the appropriate path */}
                 <div className="bg-gray-300 rounded-md flex items-center justify-center flex-col p-3">
                   <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
@@ -58,7 +58,7 @@ const Community = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-center">{communityItem.heading}</h3>
                 </div>
-              </Link>
+              
             </div>
           ))}
         </Slider>

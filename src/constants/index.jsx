@@ -311,3 +311,25 @@ export const PRODUCTS_DATA = {
     },
   ],
 };
+
+// constant.js
+// You can replace the placeholder data with your actual data
+
+
+
+export const EVENTS_DATA = [
+  {
+    id: 1,
+    title: "Event 1",
+    description: "Description for Event 1",
+    image: "https://picsum.photos/1260/192",
+  },
+  {
+    id: 2,
+    title: "Event 2",
+    description: "Description for Event 2",
+    image: "https://picsum.photos/1263/192",
+  },
+  // Add more community events if needed
+];
+

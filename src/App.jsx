@@ -10,6 +10,8 @@ import Products from './pages/Products';
 import Error from './components/Error'
 import Community from './pages/Community';
 import ProductDetails from './components/Products/ProductDetails';
+import CommunityDetails from './components/Community/CommunityDetails';
+import CommunityData from './components/Community/CommunityData';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
@@ -38,7 +40,12 @@ const router = createBrowserRouter(createRoutesFromElements(
     />
        <Route
       path="community"
-      element={<Community />}
+      element={<CommunityData />}
+     
+    />
+      <Route
+      path="community/:id"
+      element={<CommunityDetails />}
      
     />
       <Route path="*" element={<Error />} />
