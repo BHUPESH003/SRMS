@@ -9,7 +9,7 @@ import Profile from './pages/Profile';
 import Products from './pages/Products';
 import Error from './components/Error'
 import Community from './pages/Community';
-import ProductDetails from './components/product/ProductDetails';
+import ProductDetails from './components/Products/ProductDetails';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
