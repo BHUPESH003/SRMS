@@ -11,7 +11,10 @@ import Error from './components/Error'
 import Community from './pages/Community';
 import ProductDetails from './components/Products/ProductDetails';
 import CommunityDetails from './components/Community/CommunityDetails';
-import CommunityData from './components/Community/CommunityData';
+import Faq from './components/Community/Faq'
+import ShippingPolicy from './components/Support/ShippingPolicy';
+import PrivacyPolicy from './components/Support/PrivacyPolicy';
+import RefundPolicy from './components/Support/RefundPolicy';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
@@ -40,12 +43,31 @@ const router = createBrowserRouter(createRoutesFromElements(
     />
        <Route
       path="community"
-      element={<CommunityData />}
+      element={<Community />}
      
     />
       <Route
       path="community/:id"
       element={<CommunityDetails />}
+     
+    />
+      <Route
+      path="faq"
+      element={<Faq />}
+     
+    />
+
+<Route
+      path="refund-policy"
+      element={<RefundPolicy />}
+     
+    />   <Route
+      path="privacy-policy"
+      element={<PrivacyPolicy />}
+     
+    />   <Route
+      path="shipping-policy"
+      element={<ShippingPolicy />}
      
     />
       <Route path="*" element={<Error />} />

@@ -57,10 +57,10 @@ export const PRODUCTS = [
 ];
 
 export const IMPORTANT_LINKS = [
-  { id: 1, name: "FAQ'S", path: "/link1" },
-  { id: 2, name: "Privacy Policy", path: "/link2" },
-  { id: 3, name: "Refund Policy", path: "/link3" },
-  { id: 4, name: "Shipping Policy", path: "/link4" },
+  { id: 1, name: "FAQ'S", path: "/faq" },
+  { id: 2, name: "Privacy Policy", path: "/privacy-policy" },
+  { id: 3, name: "Refund Policy", path: "/refund-policy" },
+  { id: 4, name: "Shipping Policy", path: "/shipping-policy" },
 ];
 
 export const ADDRESS_CONTACT = {
@@ -333,3 +333,58 @@ export const EVENTS_DATA = [
   // Add more community events if needed
 ];
 
+
+
+
+export const faqData = [
+  {
+    id: 1,
+    question: "How can I make a payment?",
+    answer: "You can make a payment using various methods such as credit card, debit card, PayPal, or bank transfer.",
+  },
+  {
+    id: 2,
+    question: "Can I cancel my order?",
+    answer: "Yes, you can cancel your order before it has been shipped. Contact our support team for assistance.",
+  },
+  {
+    id: 3,
+    question: "What is your return policy?",
+    answer: "Our return policy allows you to return the product within 30 days of purchase for a full refund.",
+  },
+  {
+    id: 4,
+    question: "Do you offer international shipping?",
+    answer: "Yes, we offer international shipping to most countries. Shipping costs may vary depending on the destination.",
+  },
+  {
+    id: 5,
+    question: "How long does shipping take?",
+    answer: "Shipping within the country usually takes 3-5 business days. International shipping may take longer.",
+  },
+  {
+    id: 6,
+    question: "Do you provide tracking numbers for orders?",
+    answer: "Yes, we provide tracking numbers for all orders. You can track your order's status on our website.",
+  },
+  {
+    id: 7,
+    question: "Is my personal information secure?",
+    answer: "Yes, we take data security seriously. Your personal information is encrypted and protected.",
+  },
+  {
+    id: 8,
+    question: "Can I change my shipping address after placing the order?",
+    answer: "If your order has not been shipped yet, we can update your shipping address. Contact us immediately for assistance.",
+  },
+  {
+    id: 9,
+    question: "What if my package is damaged during shipping?",
+    answer: "If your package arrives damaged, please take photos and contact our support team for a replacement or refund.",
+  },
+  {
+    id: 10,
+    question: "How can I contact customer support?",
+    answer: "You can reach our customer support team via email at support@example.com or by calling our helpline at +1 123-456-7890.",
+  },
+];
