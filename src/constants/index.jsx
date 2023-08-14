@@ -148,12 +148,12 @@ export const SOCIAL_LINKS = [
   {
     name: "YouTube",
     icon: "/path/to/youtube.png", // Replace with the path to the YouTube icon
-    link: "https://www.youtube.com/example", // Replace with the link for YouTube
+    link: "https://www.youtube.com/@bhupeshyadav0001", // Replace with the link for YouTube
   },
   {
     name: "Twitter",
     icon: "/path/to/twitter.png", // Replace with the path to the Twitter icon
-    link: "https://twitter.com/example", // Replace with the link for Twitter
+    link: "https://twitter.com/ygbhupesh003", // Replace with the link for Twitter
   },
   // Add more social links here if needed
 ];
@@ -387,4 +387,54 @@ export const faqData = [
     question: "How can I contact customer support?",
     answer: "You can reach our customer support team via email at support@example.com or by calling our helpline at +1 123-456-7890.",
   },
+];
+
+
+export const privacyPolicyData = [
+  "Privacy Policy",
+  "",
+  "This policy explains how SRIRAMS (srms01.netlify.app), a brand of FreshDairy Pvt. Ltd, use your personal information that you provide to us when using our milk delivery service, including but not limited to our website, mobile applications (apps) and any other modes of communication / interaction.",
+  // ... (rest of the privacy policy content)
+  "SRIRAMS.in uses stringent security guidelines and some of the highest security standards to protect our customers from security issues, and any loss and misuse of their information.",
+  "Feel free to contact SRIRAMS at info@srirams.in for any further questions on our privacy policy."
+  
+];
+
+export const refundPolicyData = [
+  "Refund Policy",
+  "",
+  "At SRIRAMS, we want to ensure your satisfaction with our milk delivery service. If you are not entirely satisfied with your purchase, we're here to help.",
+  "",
+  "Returns",
+  "You have 1 calendar days to return an item from the date you received it. To be eligible for a return, your item must be unused and in the same condition that you received it. Your item must be in the original packaging.",
+  "",
+  "Refunds",
+  "Once we receive your item, we will inspect it and notify you that we have received your returned item. We will immediately notify you on the status of your refund after inspecting the item.",
+  "",
+  "If your return is approved, we will initiate a refund to your original method of payment. You will receive the credit within a certain amount of days, depending on your card issuer's policies.",
+  "",
+  "Contact Us",
+  "If you have any questions on how to return your item to us, contact our customer support team at support@srirams.com."
+];
+
+// constants.js
+export const shippingPolicyData = [
+  "Shipping Policy",
+  "",
+  "At SRIRAMS, we strive to provide timely and reliable milk delivery services to our customers. This shipping policy outlines the details of our shipping process.",
+  "",
+  "Shipping Methods",
+  "We offer standard shipping for all orders within our service area. Orders are typically shipped within 10-12 hours from the date of order placement. You can expect to receive your order within 16-18 hours from the shipping date.",
+  "",
+  "Shipping Fees",
+  "Shipping fees are calculated based on the delivery location and order size. The shipping fee will be displayed during the checkout process before you confirm your order.",
+  "",
+  "Tracking Information",
+  "Once your order is shipped, we will provide you with a tracking number via email. You can use this tracking number to monitor the status and estimated delivery date of your package.",
+  "",
+  "Undeliverable Packages",
+  "If a package is returned to us due to an incorrect or incomplete address provided by the customer, or if the package is refused by the recipient, a re-shipping fee may apply. Please ensure that your shipping address is accurate and complete before placing your order.",
+  "",
+  "Contact Us",
+  "If you have any questions about our shipping policy or need assistance with tracking your order, please contact our customer support team at support@srirams.com."
 ];

@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
 import { IMAGES } from "../../constants";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 
 const Slider = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    
+
+    const preloadImages = async () => {
+5
+      await Promise.all(IMAGES.map((imageSrc) => new Promise((resolve) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+      })));
+
+      setIsLoading(false);
+    };
+
+    preloadImages();
+  }, []);
 
   const nextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % IMAGES.length);
@@ -18,19 +36,30 @@ const Slider = () => {
 
   return (
     <div className="relative w-full h-72 md:h-[450px] overflow-hidden">
-     
       {IMAGES.map((image, index) => (
-        <img
+        <div
           key={index}
-          src={image}
-          alt={`Image ${index + 1}`}
-          className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out ${
-            currentImage === index ? "translate-x-0" : "translate-x-full"
-          }`}
-        />
+          className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out"
+          style={{
+            transform:
+              currentImage === index ? "translateX(0)" : "translateX(100%)",
+          }}
+        >
+          {isLoading ? (
+            <Skeleton count={10} />
+
+          ) : (
+            <img
+              src={image}
+              alt={`Image ${index + 1}`}
+              className="w-full h-full"
+            />
+          )}
+        </div>
       ))}
+
       {/* Conditionally render the arrows based on screen size */}
-  
+      {!isLoading && (
         <>
           <button
             className="absolute top-1/2 left-4 transform -translate-y-1/2 p-2 rounded-full text-black-600 shadow-md hover:bg-gray-200 transition duration-600"
@@ -45,7 +74,7 @@ const Slider = () => {
             <BsArrowRightShort size={30} />
           </button>
         </>
-      
+      )}
     </div>
   );
 };

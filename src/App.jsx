@@ -13,8 +13,9 @@ import ProductDetails from './components/Products/ProductDetails';
 import CommunityDetails from './components/Community/CommunityDetails';
 import Faq from './components/Community/Faq'
 import ShippingPolicy from './components/Support/ShippingPolicy';
-import PrivacyPolicy from './components/Support/PrivacyPolicy';
+import PrivacyPolicyPage from './components/Support/PrivacyPolicyPage';
 import RefundPolicy from './components/Support/RefundPolicy';
+
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
@@ -63,7 +64,7 @@ const router = createBrowserRouter(createRoutesFromElements(
      
     />   <Route
       path="privacy-policy"
-      element={<PrivacyPolicy />}
+      element={<PrivacyPolicyPage/>}
      
     />   <Route
       path="shipping-policy"

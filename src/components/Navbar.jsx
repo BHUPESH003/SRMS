@@ -100,9 +100,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          {/*
           <NavLink to={"/profile"}>
             <FaUserCircle className="text-2xl md:text-xl ml-4" />
-          </NavLink>
+          </NavLink> */}
         </div>
       )}
     </nav>
