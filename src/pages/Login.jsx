@@ -1,4 +1,4 @@
-import avatar from "../assets/Images/avatar.png";
+import avatar from "../assets/images/avatar.png";
 import { useContext, useState } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { UserContext } from "../components/UserContext";
