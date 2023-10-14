@@ -1,12 +1,13 @@
 import React from 'react'
 import CommunityData from '../components/Community/CommunityData'
-import FAQs from '../components/Community/Faq'
-
+import AllPosts from '../components/Posts/AllPosts'
+import Blog from '../components/Posts/Blog'
 const Community = () => {
   return (
     <>
     <CommunityData/>
-    <FAQs/>
+    <Blog/>
+    
     </>
   )
 }

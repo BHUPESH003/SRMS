@@ -102,14 +102,14 @@ const ProductBar = () => {
                         <div className="flex space-x-2">
                           {/* Start Trial Button */}
                           <Link
-                            to={`/profile/${product.id}`}
+                            to={`/order`}
                             className="flex-1 bg-blue-500 text-white rounded hover:bg-blue-600 py-2 text-sm md:text-base flex justify-center items-center"
                           >
                             Start Trial
                           </Link>
                           {/* Start Subscription Button */}
                           <Link
-                            to={`/profile/${product.id}`}
+                            to={`/order`}
                             className="flex-1 bg-green-500 text-white rounded hover:bg-green-600 py-2 text-sm md:text-base flex justify-center items-center"
                           >
                             Start Subscription

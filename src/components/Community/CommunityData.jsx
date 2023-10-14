@@ -24,13 +24,7 @@ const CommunityData = () => {
       <BannerContainer />
       {/* Rest of the content of the Community component */}
     <HomeCommunity/>
-    <CommunityEvents/>
     
-      {/* Testimonials Section */}
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Testimonials</h2>
-        <Testimonials testimonialsData={TESTIMONIALS} />
-      </div>
       
     </div>
   );

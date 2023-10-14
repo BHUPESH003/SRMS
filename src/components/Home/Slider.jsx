@@ -6,22 +6,24 @@ import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 const Slider = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [preloadedImages, setPreloadedImages] = useState([]);
 
   useEffect(() => {
-    
-
-    const preloadImages = async () => {
-5
-      await Promise.all(IMAGES.map((imageSrc) => new Promise((resolve) => {
+    // Function to preload an image
+    const preloadImage = (src) => {
+      return new Promise((resolve) => {
         const img = new Image();
-        img.src = imageSrc;
+        img.src = src;
         img.onload = resolve;
-      })));
-
-      setIsLoading(false);
+      });
     };
 
-    preloadImages();
+    // Preload all images and update state when done
+    Promise.all(IMAGES.map((imageSrc) => preloadImage(imageSrc)))
+      .then(() => {
+        setPreloadedImages(IMAGES);
+        setIsLoading(false);
+      });
   }, []);
 
   const nextImage = () => {
@@ -36,7 +38,7 @@ const Slider = () => {
 
   return (
     <div className="relative w-full h-72 md:h-[450px] overflow-hidden">
-      {IMAGES.map((image, index) => (
+      {preloadedImages.map((image, index) => (
         <div
           key={index}
           className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out"
@@ -47,7 +49,6 @@ const Slider = () => {
         >
           {isLoading ? (
             <Skeleton count={10} />
-
           ) : (
             <img
               src={image}

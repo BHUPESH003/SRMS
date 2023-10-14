@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Modal from './Modal';
-import ContactSvg from '../../assets/images/hero-img-up.avif'; // Replace this with the actual SVG path
+import ContactSvg from '../../assets/images/hero-img-up.avif';
 
 const FormComponent = () => {
   const initialFormData = {
@@ -13,7 +13,7 @@ const FormComponent = () => {
 
   const [formData, setFormData] = useState(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const history = useNavigation();
+  const history = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,30 +23,41 @@ const FormComponent = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Perform any form validation or submission logic here
-    // For simplicity, let's assume the form is valid
+    try {
+      // Send a POST request to the backend API
+      const response = await fetch('http://localhost:5001/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitted(true);
-    setFormData(initialFormData)
-
-    // Navigate to a new page using react-router-dom (optional)
-    history.push('/dashboard');
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData(initialFormData);
+      } else {
+        console.error('Failed to submit the form');
+      }
+    } catch (error) {
+      console.error('Failed to submit the form', error);
+    }
   };
 
   const closeModal = () => {
     setIsSubmitted(false);
+    // Optionally, you can navigate to a new page here (e.g., dashboard)
+    history('/community');
   };
 
   return (
     <div className="container mx-auto mt-8">
       <div className="w-full mx-auto bg-white shadow-md rounded-md p-8 flex flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2 pr-0 md:pr-8 mb-4 md:mb-0">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
-            Contact Us
-          </h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block font-semibold mb-2">Name:</label>
@@ -101,7 +112,6 @@ const FormComponent = () => {
           </form>
         </div>
         <div className="w-full md:w-1/2 pl-0 md:pl-8">
-          {/* Replace ContactSvg with your actual SVG component */}
           <img src={ContactSvg} alt="Contact" className="w-full rounded-md opacity-70" />
         </div>
       </div>

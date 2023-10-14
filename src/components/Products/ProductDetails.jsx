@@ -1,6 +1,6 @@
 import { PRODUCTS_DATA } from "/src/constants/index";
 import React,{useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -38,13 +38,18 @@ const ProductDetails = () => {
               </div>
               <div className="flex space-x-2 mt-4 md:mt-0">
                 {/* Start Trial Button */}
+                <Link to={'/order'}>
                 <button className="bg-blue-500 text-white rounded hover:bg-blue-600 px-4 py-2 text-sm md:text-base">
                   Start Trial
                 </button>
+                </Link>
                 {/* Start Subscription Button */}
+                <Link to={'/order'}>
                 <button className="bg-green-500 text-white rounded hover:bg-green-600 px-4 py-2 text-sm md:text-base">
                   Start Subscription
                 </button>
+                </Link>
+               
                 {/* View Button */}
                 
               </div>

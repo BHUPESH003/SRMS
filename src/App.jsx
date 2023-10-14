@@ -3,7 +3,6 @@ import React from 'react';
 import {  Link, Route, createBrowserRouter,createRoutesFromElements,RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home'
-import WhyUs from './pages/WhyUs';
 import Support from './pages/Support';
 import Profile from './pages/Profile';
 import Products from './pages/Products';
@@ -15,12 +14,19 @@ import Faq from './components/Community/Faq'
 import ShippingPolicy from './components/Support/ShippingPolicy';
 import PrivacyPolicyPage from './components/Support/PrivacyPolicyPage';
 import RefundPolicy from './components/Support/RefundPolicy';
+import LoginComponent from './pages/Login';
+import Register from './pages/Register';
+import PostDetails from './components/Posts/PostDetails'
+import EditPost from './components/Posts/EditPost'
+import CreatePostForm from './components/Posts/CreatePosts';
+import { UserContextProvider } from './components/UserContext.jsx';
+import DownloadApp from './components/AppComponet';
+
 
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
     <Route index element={<Home />} />
-    <Route path="whyus" element={<WhyUs />} />
   
     <Route
       path="products"
@@ -43,6 +49,31 @@ const router = createBrowserRouter(createRoutesFromElements(
      
     />
        <Route
+      path="post/:id"
+      element={<PostDetails />}
+     
+    />
+       <Route
+      path="create"
+      element={<CreatePostForm />}
+     
+    />
+      <Route
+      path="edit/:id"
+      element={<EditPost />}
+     
+    />
+      <Route
+      path="login"
+      element={<LoginComponent />}
+     
+    />
+      <Route
+      path="register"
+      element={<Register />}
+     
+    />
+       <Route
       path="community"
       element={<Community />}
      
@@ -55,6 +86,11 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route
       path="faq"
       element={<Faq />}
+     
+    />
+     <Route
+      path="order"
+      element={<DownloadApp />}
      
     />
 
@@ -77,7 +113,9 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 function App() {
   return (
+    <UserContextProvider>
     <RouterProvider router={router} />
+    </UserContextProvider>
   )
 }
 
